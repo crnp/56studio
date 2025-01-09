@@ -1,0 +1,144 @@
+---
+import logotype from '../assets/56studio_logotype_white.svg';
+import LinkButton from './LinkButton';
+---
+
+<div
+  class="px-4 pt-16 mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-2xl md:px-24 lg:px-8"
+>
+  <div class="grid gap-16 row-gap-10 mb-8 lg:grid-cols-6">
+    <div class="md:max-w-md lg:col-span-2">
+      <a
+        href="/"
+        aria-label="Go home"
+        title="56 Studio Jakarta"
+        class="inline-flex items-center"
+      >
+        <img
+          src={logotype.src}
+          alt="56 Studio Jakarta"
+          class="max-h-12 md:max-h-16"
+        />
+      </a>
+      <div class="mt-4 lg:max-w-sm">
+        <p class="text-sm text-studio-white-darker">
+          Kembangkan kekuatan anda melalui musik dan suara dengan kami di 56
+          Studio Jakarta.
+        </p>
+        <div class="flex items-center mt-4 space-x-4">
+          <a
+            href="https://wa.me/628999999660"
+            target="_blank"
+            class="text-studio-white transition-colors duration-300 hover:text-studio-primary"
+          >
+            <svg viewBox="0 0 50 50" fill="currentColor" class="h-10">
+              <path
+                d="M25,2C12.318,2,2,12.318,2,25c0,3.96,1.023,7.854,2.963,11.29L2.037,46.73c-0.096,0.343-0.003,0.711,0.245,0.966 C2.473,47.893,2.733,48,3,48c0.08,0,0.161-0.01,0.24-0.029l10.896-2.699C17.463,47.058,21.21,48,25,48c12.682,0,23-10.318,23-23 S37.682,2,25,2z M36.57,33.116c-0.492,1.362-2.852,2.605-3.986,2.772c-1.018,0.149-2.306,0.213-3.72-0.231 c-0.857-0.27-1.957-0.628-3.366-1.229c-5.923-2.526-9.791-8.415-10.087-8.804C15.116,25.235,13,22.463,13,19.594 s1.525-4.28,2.067-4.864c0.542-0.584,1.181-0.73,1.575-0.73s0.787,0.005,1.132,0.021c0.363,0.018,0.85-0.137,1.329,1.001 c0.492,1.168,1.673,4.037,1.819,4.33c0.148,0.292,0.246,0.633,0.05,1.022c-0.196,0.389-0.294,0.632-0.59,0.973 s-0.62,0.76-0.886,1.022c-0.296,0.291-0.603,0.606-0.259,1.19c0.344,0.584,1.529,2.493,3.285,4.039 c2.255,1.986,4.158,2.602,4.748,2.894c0.59,0.292,0.935,0.243,1.279-0.146c0.344-0.39,1.476-1.703,1.869-2.286 s0.787-0.487,1.329-0.292c0.542,0.194,3.445,1.604,4.035,1.896c0.59,0.292,0.984,0.438,1.132,0.681 C37.062,30.587,37.062,31.755,36.57,33.116z"
+              ></path>
+            </svg>
+          </a>
+          <a
+            href="https://www.instagram.com/56studio.jkt"
+            target="_blank"
+            class="text-studio-white transition-colors duration-300 hover:text-studio-primary"
+          >
+            <svg viewBox="0 0 30 30" fill="currentColor" class="h-10">
+              <circle cx="15" cy="15" r="4"></circle>
+              <path
+                d="M19.999,3h-10C6.14,3,3,6.141,3,10.001v10C3,23.86,6.141,27,10.001,27h10C23.86,27,27,23.859,27,19.999v-10   C27,6.14,23.859,3,19.999,3z M15,21c-3.309,0-6-2.691-6-6s2.691-6,6-6s6,2.691,6,6S18.309,21,15,21z M22,9c-0.552,0-1-0.448-1-1   c0-0.552,0.448-1,1-1s1,0.448,1,1C23,8.552,22.552,9,22,9z"
+              ></path>
+            </svg>
+          </a>
+          <a
+            href="https://www.facebook.com/56studio.jkt"
+            target="_blank"
+            class="text-studio-white transition-colors duration-300 hover:text-studio-primary"
+          >
+            <svg viewBox="0 0 24 24" fill="currentColor" class="h-9">
+              <path
+                d="M22,0H2C0.895,0,0,0.895,0,2v20c0,1.105,0.895,2,2,2h11v-9h-3v-4h3V8.413c0-3.1,1.893-4.788,4.659-4.788 c1.325,0,2.463,0.099,2.795,0.143v3.24l-1.918,0.001c-1.504,0-1.795,0.715-1.795,1.763V11h4.44l-1,4h-3.44v9H22c1.105,0,2-0.895,2-2 V2C24,0.895,23.105,0,22,0z"
+              ></path>
+            </svg>
+          </a>
+        </div>
+      </div>
+    </div>
+    <div
+      class="flex flex-col sm:flex-row gap-8 lg:col-span-4 lg:justify-around"
+    >
+      <div class="">
+        <p class="font-semibold tracking-wide text-studio-white-darker">
+          Layanan
+        </p>
+        <ul class="mt-2 space-y-2">
+          <li>
+            <a
+              href="/"
+              class="text-studio-white transition-colors duration-300 hover:text-studio-primary"
+              >Recording & Music Production</a
+            >
+          </li>
+          <li>
+            <a
+              href="/"
+              class="text-studio-white transition-colors duration-300 hover:text-studio-primary"
+              >Staffing</a
+            >
+          </li>
+          <li>
+            <a
+              href="/"
+              class="text-studio-white transition-colors duration-300 hover:text-studio-primary"
+              >Sound System</a
+            >
+          </li>
+          <li>
+            <a
+              href="/"
+              class="text-studio-white transition-colors duration-300 hover:text-studio-primary"
+              >Location / Production Audio</a
+            >
+          </li>
+        </ul>
+      </div>
+      <div>
+        <p class="font-semibold tracking-wide text-studio-white-darker">
+          Kontak
+        </p>
+        <ul class="mt-2 space-y-2">
+          <li>
+            <a
+              href="tel:+628999999660"
+              class="text-studio-white transition-colors duration-300 hover:text-studio-primary"
+              >(+62) 8999-999-660</a
+            >
+          </li>
+          <li>
+            <a
+              href="mailto:56studiojakarta@gmail.com"
+              class="text-studio-white transition-colors duration-300 hover:text-studio-primary"
+            >
+              56studiojakarta@gmail.com</a
+            >
+          </li>
+          <li>
+            <a
+              href="https://maps.app.goo.gl/X8jEAyuTHuQYsEav7"
+              class="text-studio-white transition-colors duration-300 hover:text-studio-primary"
+              target="_blank"
+            >
+              Asofa Raya No. 56, Kebon Jeruk, Jakarta Barat</a
+            >
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+  <div class="flex flex-col justify-between pt-5 pb-10 border-t sm:flex-row">
+    <p class="text-sm text-studio-white">
+      © Copyright
+      {new Date().getFullYear()}
+      56 Studio Jakarta. All rights reserved.
+    </p>
+  </div>
+</div>

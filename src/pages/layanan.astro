@@ -1,0 +1,172 @@
+---
+import ResponsiveImage from '../components/ResponsiveImage.astro';
+import Layout from '../layouts/Layout.astro';
+import LinkButton from '../components/LinkButton';
+
+import recordingPhotoDesktop from '../assets/services/recording_desktop.jpg';
+import recordingPhotoMobile from '../assets/services/recording_mobile.jpg';
+import liveEventPhotoDesktop from '../assets/services/live_desktop.jpg';
+import liveEventPhotoMobile from '../assets/services/live_mobile.jpg';
+import soundSystemPhotoDesktop from '../assets/services/soundsystem_desktop.jpg';
+import soundSystemPhotoMobile from '../assets/services/soundsystem_mobile.jpg';
+import onLocationPhotoDesktop from '../assets/services/onlocation_desktop.jpg';
+import onLocationPhotoMobile from '../assets/services/onlocation_mobile.jpg';
+---
+
+<Layout
+  title="56 Studio Jakarta"
+  ,
+  description="Kembangkan kekuatan anda melalui musik dan suara dengan kami di 56 Studio Jakarta."
+>
+  <section
+    class="relative px-6 pt-32 sm:pt-24 md:pt-44 pb-16 flex flex-col min-h-screen gap-20 lg:gap-0 items-center"
+  >
+    <div class="max-w-7xl">
+      <h1
+        class="text-3xl sm:text-5xl md:text-6xl 3xl:text-9xl font-display text-center mb-12"
+      >
+        Kami siap membantu segala kebutuhan anda
+      </h1>
+      <div class="space-y-10">
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+          <ResponsiveImage
+            mobileImgUrl={recordingPhotoMobile}
+            desktopImgUrl={recordingPhotoDesktop}
+            alt="Recording and Music Production Studio"
+          />
+          <div class="flex flex-col gap-4 justify-center">
+            <h2 class="font-display text-3xl">
+              Recording and Music Production Studio
+            </h2>
+            <p class="md:text-lg lg:text-xl">
+              Rekam dan wujudkan visi kreatif anda di studio rekaman profesional
+              kami. Dengan pengalaman luas dalam produksi musik, jingle podcast,
+              voice-over, mixing, dan mastering, kami siap membantu Anda
+              menciptakan karya terbaik.
+            </p>
+            <p class="md:text-lg lg:text-xl">
+              Studio kami telah menjadi pilihan utama bagi pelaku bisnis,
+              musisi, podcaster, dan pelaku industri kreatif. Fasilitas kami
+              telah dipercaya untuk menghasilkan berbagai karya berkualitas
+              tinggi, termasuk proyek-proyek dari merek terkemuka seperti
+              Cimory, Le Minerale, serta kolaborasi dengan musisi dan band
+              berbakat lainnya.
+            </p>
+            <p class="md:text-lg lg:text-xl">
+              Kami juga dilengkapi dengan teknologi terkini dan perlengkapan
+              mumpuni untuk memenuhi kebutuhan pascaproduksi, termasuk pelacakan
+              dengan visual untuk produksi konten yang kompleks. Hubungi kami
+              hari ini untuk mengatur kunjungan, konsultasi, atau penawaran
+              terbaik yang sesuai dengan kebutuhan Anda!
+            </p>
+            <LinkButton href="/kontak" className="mt-6">Hubungi Kami</LinkButton
+            >
+          </div>
+        </div>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-4 m">
+          <ResponsiveImage
+            mobileImgUrl={liveEventPhotoMobile}
+            desktopImgUrl={liveEventPhotoDesktop}
+            alt="Live Event Production & Staffing"
+          />
+          <div class="flex flex-col gap-4 md:order-first justify-center">
+            <h2 class="font-display text-3xl">
+              Live Event Production and Staffing
+            </h2>
+            <p class="md:text-lg lg:text-xl">
+              56 Studio Jakarta telah memperluas cakupan layanannya ke bidang
+              produksi live dengan menghadirkan berbagai jenis acara, mulai dari
+              peluncuran produk, pertunjukan musik live, podcast live, hingga
+              siaran radio frekuensi dan radio internet berskala besar. Dengan
+              pendekatan berkelas yang mengutamakan kualitas tinggi, serta
+              filosofi kerja "palugada" (apa lu mau, gua ada), kami telah
+              menjadi mitra terpercaya untuk berbagai produksi rutin yang
+              membutuhkan solusi kreatif dan profesional.
+            </p>
+            <p class="md:text-lg lg:text-xl">
+              Keunggulan kami terletak pada kemampuan melakukan multi-tracking
+              profesional pada konser live, panggung suara, hingga berbagai
+              lokasi penting lainnya. Hal ini menjadikan 56 Studio Jakarta
+              sebagai pilihan utama dalam penyelenggaraan produksi acara yang
+              dirancang secara khusus untuk memenuhi kebutuhan klien, dengan
+              perhatian terhadap detail dan kualitas tanpa kompromi.
+            </p>
+            <LinkButton href="/kontak" className="mt-6">Hubungi Kami</LinkButton
+            >
+          </div>
+        </div>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+          <ResponsiveImage
+            mobileImgUrl={soundSystemPhotoMobile}
+            desktopImgUrl={soundSystemPhotoDesktop}
+            alt="Sound System Design and Installation"
+          />
+          <div class="flex flex-col gap-4 justify-center">
+            <h2 class="font-display text-3xl">
+              Sound System Design and Installation
+            </h2>
+            <p class="md:text-lg lg:text-xl">
+              Kami bangga menjadi penyedia solusi lengkap untuk desain dan
+              instalasi sistem audio/visual yang inovatif dan berkualitas
+              tinggi.
+            </p>
+            <p class="md:text-lg lg:text-xl">
+              Tim kami memiliki pengalaman luas dalam merancang dan memasang
+              sistem yang sepenuhnya disesuaikan dengan kebutuhan klien,
+              termasuk untuk restoran, bar, venue, ruang acara, dan studio.
+              Setiap proyek kami tangani dengan pendekatan yang detail dan
+              personal, memastikan hasil akhir yang optimal sesuai dengan
+              karakteristik dan tujuan spesifik setiap ruang.
+            </p>
+            <p class="md:text-lg lg:text-xl">
+              Selain itu, kami juga menyediakan layanan tambahan seperti
+              manajemen produksi untuk acara, penyediaan tenaga kerja
+              profesional, dan pemeliharaan sistem secara berkala. Dengan
+              layanan yang komprehensif ini, kami hadir untuk memberikan solusi
+              yang tidak hanya fungsional tetapi juga tahan lama.
+            </p>
+            <p class="md:text-lg lg:text-xl">
+              Mari bermitra dengan kami untuk merancang dan menciptakan sistem
+              audio/visual yang sempurna dan sesuai dengan visi Anda!
+            </p>
+            <LinkButton href="/kontak" className="mt-6">Hubungi Kami</LinkButton
+            >
+          </div>
+        </div>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-4 m">
+          <ResponsiveImage
+            mobileImgUrl={onLocationPhotoMobile}
+            desktopImgUrl={onLocationPhotoDesktop}
+            alt="On Location Audio Production"
+          />
+          <div class="flex flex-col gap-4 md:order-first justify-center">
+            <h2 class="font-display text-3xl">
+              Live Event Production & Staffing
+            </h2>
+            <p class="md:text-lg lg:text-xl">
+              56 Studio Jakarta telah menjadi bagian dari dunia on-location
+              production sejak tahun 2015! Kami telah merekam berbagai proyek
+              kreatif, mulai dari iklan komersial, iklan digital, film, segmen
+              radio, hingga dokumenter di Indonesia, Malaysia, dan Australia.
+            </p>
+            <p class="md:text-lg lg:text-xl">
+              Pengalaman kami yang luas memungkinkan kami memahami sepenuhnya
+              tantangan kompleks dalam perekaman audio di lokasi, termasuk
+              menangani berbagai kondisi lingkungan dan kebutuhan teknis unik
+              setiap produksi. Dengan peralatan canggih dan tim profesional yang
+              berdedikasi, kami memastikan kualitas audio yang optimal, bahkan
+              di situasi yang paling menantang sekalipun.
+            </p>
+            <p class="md:text-lg lg:text-xl">
+              Percayakan kebutuhan produksi Anda kepada kami, dan mari
+              bersama-sama mewujudkan proyek Anda berikutnya dengan hasil
+              terbaik. Hubungi kami sekarang untuk diskusi lebih lanjut!
+            </p>
+            <LinkButton href="/kontak" className="mt-6">Hubungi Kami</LinkButton
+            >
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</Layout>

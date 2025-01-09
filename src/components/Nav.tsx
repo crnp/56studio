@@ -5,7 +5,7 @@ import { motion } from 'motion/react';
 import logotype from '../assets/56studio_logotype_white.svg';
 import LinkButton from './LinkButton';
 
-const navLinks = ['beranda', 'layanan', 'klien', 'fasilitas', 'tentang kami'];
+const navLinks = ['beranda', 'layanan', 'klien', 'fasilitas', 'tentang'];
 
 const navMotion = {
   visible: {
@@ -46,7 +46,9 @@ export const Nav = () => {
                 key={i}
                 className="transition-colors duration-300 hover:text-studio-primary"
               >
-                <a href={`/${n == 'beranda' ? '' : n}`}>{n}</a>
+                <a href={`/${n == 'beranda' ? '' : n}`}>
+                  {n == 'tentang' ? 'tentang kami' : n}
+                </a>
               </li>
             ))}
           </ul>
@@ -125,7 +127,9 @@ export const Nav = () => {
               {navLinks.map((n, i) => {
                 return (
                   <motion.li variants={itemMotion} key={i}>
-                    <a href={`/${n == 'beranda' ? '' : n}`}>{n}</a>
+                    <a href={`/${n == 'beranda' ? '' : n}`}>
+                      {n == 'tentang' ? 'tentang kami' : n}
+                    </a>
                   </motion.li>
                 );
               })}

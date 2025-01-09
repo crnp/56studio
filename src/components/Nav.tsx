@@ -42,7 +42,7 @@ export const Nav = () => {
           />
         </a>
         <div className="items-center gap-8 hidden lg:flex">
-          <ul className="flex gap-4 text-base xl:text-xl font-bold uppercase">
+          <ul className="flex gap-12 text-base xl:text-xl font-bold uppercase">
             {navLinks.map((n, i) => (
               <li
                 key={i}
@@ -59,7 +59,7 @@ export const Nav = () => {
           width="115.258"
           height="100.094"
           viewBox="0 0 4416 4416"
-          className="group z-50 max-h-12 w-max md:max-h-16 lg:hidden"
+          className="group z-30 max-h-12 w-max md:max-h-16 lg:hidden"
           onClick={() => setToggle((prevToggle) => !prevToggle)}
         >
           <path
@@ -138,6 +138,11 @@ export const Nav = () => {
           </motion.div>
         )}
       </nav>
+      <div className="w-full hidden" id="progress-bar">
+        <div className="h-0.5 w-full bg-studio-darker overflow-hidden">
+          <div className="animate-progress w-full h-full bg-studio-white origin-left-right"></div>
+        </div>
+      </div>
     </header>
   );
 };

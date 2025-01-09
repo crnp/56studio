@@ -31,22 +31,26 @@ const BrandLogos: Array<{ src: any; alt: string }> = [
   },
 ];
 
-const MusiciansImages: Array<{ src: any; alt: string }> = [
+const MusiciansImages: Array<{ src: any; alt: string; loc: string }> = [
   {
     src: husheImage,
     alt: 'Hushe',
+    loc: 'Jakarta, Indonesia',
   },
   {
     src: djbodsImage,
     alt: 'DJBODS',
+    loc: 'Melbourne, Australia',
   },
   {
     src: jaydkaysImage,
     alt: 'JAYDKAYS',
+    loc: 'Melbourne, Australia',
   },
   {
     src: eliteGlobalImage,
     alt: 'Elite Global',
+    loc: 'Jakarta, Indonesia',
   },
 ];
 ---
@@ -75,7 +79,9 @@ const MusiciansImages: Array<{ src: any; alt: string }> = [
                   <h1 class="tracking-wider uppercase text-3xl font-display">
                     {img.alt}
                   </h1>
-                  {/* <p class="mx-auto">Description</p> */}
+                  <p class="mx-auto text-lg text-studio-white-darker">
+                    {img.loc}
+                  </p>
                 </div>
                 <div class="relative">
                   <div class="h-auto flex flex-wrap content-center">

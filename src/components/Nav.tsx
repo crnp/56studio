@@ -1,10 +1,11 @@
 import { useState } from 'react';
+import { getImage } from 'astro:assets';
 import { motion } from 'motion/react';
 
 import logotype from '../assets/56studio_logotype_white.svg';
 import LinkButton from './LinkButton';
 
-const navLinks = ['beranda', 'layanan', 'klien', 'fasilitas', 'tentang'];
+const navLinks = ['beranda', 'layanan', 'klien', 'fasilitas'];
 
 const navMotion = {
   visible: {
@@ -25,6 +26,8 @@ const itemMotion = {
   hidden: { opacity: 0, x: -100 },
 };
 
+const optimizedLogo = await getImage({ src: logotype });
+
 export const Nav = () => {
   const [toggle, setToggle] = useState(false);
 
@@ -33,7 +36,7 @@ export const Nav = () => {
       <nav className="relative mx-8 flex justify-between items-center font-medium md:mx-16 lg:mx-20 ">
         <a href="/" aria-label="Go home" title="56 Studio Jakarta">
           <img
-            src={logotype.src}
+            src={optimizedLogo.src}
             alt="56 Studio Jakarta"
             className="max-h-12 md:max-h-16"
           />
@@ -45,9 +48,7 @@ export const Nav = () => {
                 key={i}
                 className="transition-colors duration-300 hover:text-studio-primary"
               >
-                <a href={`/${n == 'beranda' ? '' : n}`}>
-                  {n == 'tentang' ? 'tentang kami' : n}
-                </a>
+                <a href={`/${n == 'beranda' ? '' : n}`}>{n}</a>
               </li>
             ))}
           </ul>
@@ -126,9 +127,7 @@ export const Nav = () => {
               {navLinks.map((n, i) => {
                 return (
                   <motion.li variants={itemMotion} key={i}>
-                    <a href={`/${n == 'beranda' ? '' : n}`}>
-                      {n == 'tentang' ? 'tentang kami' : n}
-                    </a>
+                    <a href={`/${n == 'beranda' ? '' : n}`}>{n}</a>
                   </motion.li>
                 );
               })}

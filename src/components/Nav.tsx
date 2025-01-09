@@ -129,9 +129,7 @@ export const Nav = () => {
               {navLinks.map((n, i) => {
                 return (
                   <motion.li variants={itemMotion} key={i}>
-                    <a href={`/${n == 'beranda' ? '' : n}`}>
-                      {n == 'tentang' ? 'tentang kami' : n}
-                    </a>
+                    <a href={`/${n == 'beranda' ? '' : n}`}>{n}</a>
                   </motion.li>
                 );
               })}

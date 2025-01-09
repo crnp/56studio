@@ -28,7 +28,7 @@ import onLocationPhotoMobile from '../assets/services/onlocation_mobile.jpg';
         Kami siap membantu segala kebutuhan anda
       </h1>
       <div class="space-y-10">
-        <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+        <section id="production" class="grid grid-cols-1 md:grid-cols-2 gap-4">
           <ResponsiveImage
             mobileImgUrl={recordingPhotoMobile}
             desktopImgUrl={recordingPhotoDesktop}
@@ -62,8 +62,8 @@ import onLocationPhotoMobile from '../assets/services/onlocation_mobile.jpg';
             <LinkButton href="/kontak" className="mt-6">Hubungi Kami</LinkButton
             >
           </div>
-        </div>
-        <div class="grid grid-cols-1 md:grid-cols-2 gap-4 m">
+        </section>
+        <section id="staffing" class="grid grid-cols-1 md:grid-cols-2 gap-4 m">
           <ResponsiveImage
             mobileImgUrl={liveEventPhotoMobile}
             desktopImgUrl={liveEventPhotoDesktop}
@@ -94,8 +94,8 @@ import onLocationPhotoMobile from '../assets/services/onlocation_mobile.jpg';
             <LinkButton href="/kontak" className="mt-6">Hubungi Kami</LinkButton
             >
           </div>
-        </div>
-        <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+        </section>
+        <section id="soundsystem" class="grid grid-cols-1 md:grid-cols-2 gap-4">
           <ResponsiveImage
             mobileImgUrl={soundSystemPhotoMobile}
             desktopImgUrl={soundSystemPhotoDesktop}
@@ -132,8 +132,11 @@ import onLocationPhotoMobile from '../assets/services/onlocation_mobile.jpg';
             <LinkButton href="/kontak" className="mt-6">Hubungi Kami</LinkButton
             >
           </div>
-        </div>
-        <div class="grid grid-cols-1 md:grid-cols-2 gap-4 m">
+        </section>
+        <section
+          id="onlocation"
+          class="grid grid-cols-1 md:grid-cols-2 gap-4 m"
+        >
           <ResponsiveImage
             mobileImgUrl={onLocationPhotoMobile}
             desktopImgUrl={onLocationPhotoDesktop}
@@ -163,7 +166,7 @@ import onLocationPhotoMobile from '../assets/services/onlocation_mobile.jpg';
             <LinkButton href="/kontak" className="mt-6">Hubungi Kami</LinkButton
             >
           </div>
-        </div>
+        </section>
       </div>
     </div>
   </section>

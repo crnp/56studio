@@ -1,5 +1,54 @@
 ---
+import { Image } from 'astro:assets';
 import Layout from '../layouts/Layout.astro';
+
+import husheImage from '../assets/musicians/HUSHE_1200x1200.jpg';
+import djbodsImage from '../assets/musicians/DJBODS_1200x1200.jpg';
+import jaydkaysImage from '../assets/musicians/JAYDKAYS_1200x1200.jpg';
+import eliteGlobalImage from '../assets/musicians/ELITE_GLOBAL_1200x1200.jpg';
+import BrandScroller from '../components/BrandScroller.astro';
+
+const BrandLogos: Array<{ src: any; alt: string }> = [
+  {
+    src: '/images/brands/MAHAD_AL_ALAMI.svg',
+    alt: "Ma'had Al Alami",
+  },
+  {
+    src: '/images/brands/UINSU.svg',
+    alt: 'UIN Sumatera Utara',
+  },
+  {
+    src: '/images/brands/CIMORY.svg',
+    alt: 'Cimory',
+  },
+  {
+    src: '/images/brands/LE_MINERALE.svg',
+    alt: 'Le Minerale',
+  },
+  {
+    src: '/images/brands/PARTAI_UMMAT.svg',
+    alt: 'Partai Ummat',
+  },
+];
+
+const MusiciansImages: Array<{ src: any; alt: string }> = [
+  {
+    src: husheImage,
+    alt: 'Hushe',
+  },
+  {
+    src: djbodsImage,
+    alt: 'DJBODS',
+  },
+  {
+    src: jaydkaysImage,
+    alt: 'JAYDKAYS',
+  },
+  {
+    src: eliteGlobalImage,
+    alt: 'Elite Global',
+  },
+];
 ---
 
 <Layout
@@ -7,5 +56,44 @@ import Layout from '../layouts/Layout.astro';
   ,
   description="Klien-klien yang sudah bekerja sama dengan kami di 56 Studio Jakarta."
 >
-  <h1>Klien WIP</h1>
+  <section
+    class="relative px-6 pt-32 sm:pt-24 md:pt-44 pb-16 flex flex-col min-h-screen gap-20 lg:gap-0 items-center"
+  >
+    <div class="max-w-7xl">
+      <h1
+        class="text-3xl sm:text-5xl md:text-6xl 3xl:text-9xl font-display text-center mb-12"
+      >
+        Telah dipercaya oleh berbagai macam instansi dan musisi
+      </h1>
+
+      <div class="grid grid-cols-2 lg:grid-cols-4 gap-4 mb-12">
+        {
+          MusiciansImages.map((img) => (
+            <div>
+              <div class="relative">
+                <div class="absolute inset-0 z-10 bg-studio-darker text-center flex flex-col items-center justify-center opacity-0 hover:opacity-100 bg-opacity-90 duration-300">
+                  <h1 class="tracking-wider uppercase text-3xl font-display">
+                    {img.alt}
+                  </h1>
+                  {/* <p class="mx-auto">Description</p> */}
+                </div>
+                <div class="relative">
+                  <div class="h-auto flex flex-wrap content-center">
+                    <Image
+                      class="h-auto max-w-full rounded-lg mx-auto"
+                      src={img.src}
+                      alt={img.alt}
+                      loading="eager"
+                    />
+                  </div>
+                </div>
+              </div>
+            </div>
+          ))
+        }
+      </div>
+
+      <BrandScroller />
+    </div>
+  </section>
 </Layout>

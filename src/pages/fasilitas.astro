@@ -1,5 +1,20 @@
 ---
+import { Image } from 'astro:assets';
 import Layout from '../layouts/Layout.astro';
+
+import recordingStudioImage from '../assets/facilities/RECORDINGMUSICPRODUCTIONSTUDIO.jpg';
+import liveroomImage from '../assets/facilities/LIVEROOM.jpg';
+
+const FacilitiesImages: Array<{ src: any; alt: string }> = [
+  {
+    src: recordingStudioImage,
+    alt: 'Recording Music Production Studio',
+  },
+  {
+    src: liveroomImage,
+    alt: 'Live Room',
+  },
+];
 ---
 
 <Layout
@@ -7,5 +22,30 @@ import Layout from '../layouts/Layout.astro';
   ,
   description="Fasilitas yang kami sediakan di 56 Studio Jakarta."
 >
-  <h1>Fasilitas WIP</h1>
+  <section
+    class="relative px-6 pt-32 sm:pt-24 md:pt-44 pb-16 flex flex-col min-h-screen gap-20 lg:gap-0 items-center"
+  >
+    <div class="max-w-7xl">
+      <h1
+        class="text-3xl sm:text-5xl md:text-6xl 3xl:text-9xl font-display text-center mb-12"
+      >
+        Fasilitas yang kami sediakan di 56 Studio Jakarta
+      </h1>
+
+      <div class="grid grid-cols-2 md:grid-cols-3 gap-4">
+        {
+          FacilitiesImages.map((img) => (
+            <div>
+              <Image
+                class="h-auto max-w-full rounded-lg"
+                src={img.src}
+                alt={img.alt}
+                loading="eager"
+              />
+            </div>
+          ))
+        }
+      </div>
+    </div>
+  </section>
 </Layout>

@@ -1,4 +1,5 @@
 ---
+import SocialMediaIcons from '../components/SocialMediaIcons.astro';
 import Layout from '../layouts/Layout.astro';
 ---
 
@@ -7,5 +8,74 @@ import Layout from '../layouts/Layout.astro';
   ,
   description="Kontak 56 Studio Jakarta."
 >
-  <h1>Kontak WIP</h1>
+  <section
+    class="relative px-6 pt-32 sm:pt-24 md:pt-44 pb-16 flex flex-col min-h-screen gap-20 lg:gap-0 items-center"
+  >
+    <div class="container max-w-7xl">
+      <h1
+        class="text-3xl sm:text-5xl md:text-6xl 3xl:text-9xl font-display text-center mb-12"
+      >
+        Kontak 56 Studio Jakarta
+      </h1>
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mb-8">
+        <div>
+          <h3 class="text-lg text-studio-white-darker font-semibold mb-2">
+            Sosial Media
+          </h3>
+          <SocialMediaIcons />
+        </div>
+        <div>
+          <h3 class="text-lg text-studio-white-darker font-semibold mb-2">
+            Email dan Telepon
+          </h3>
+          <ul class="space-y-2">
+            <li>
+              <a
+                href="tel:+628999999660"
+                class="text-studio-white transition-colors duration-300 hover:text-studio-primary"
+                >(+62) 8999-999-660</a
+              >
+            </li>
+            <li>
+              <a
+                href="mailto:56studiojakarta@gmail.com"
+                class="text-studio-white transition-colors duration-300 hover:text-studio-primary"
+              >
+                56studiojakarta@gmail.com</a
+              >
+            </li>
+          </ul>
+        </div>
+        <div>
+          <h3 class="text-lg text-studio-white-darker font-semibold mb-2">
+            Alamat Studio & Kantor Pusat
+          </h3>
+          <a
+            href="https://maps.app.goo.gl/X8jEAyuTHuQYsEav7"
+            class="text-studio-white transition-colors duration-300 hover:text-studio-primary"
+            target="_blank"
+          >
+            <p>
+              Jalan Asofa Raya No.56<br />
+              Kebon Jeruk, Jakarta Barat, 11540<br />
+              Indonesia
+            </p></a
+          >
+        </div>
+      </div>
+      <div
+        class="relative h-0 overflow-hidden mb-6"
+        style="padding-bottom: 56.25%;"
+      >
+        <iframe
+          title="Lokasi 56 Studio Jakarta"
+          class="absolute top-0 left-0 w-full h-full"
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d19989.332082809797!2d106.7718600225525!3d-6.2127507654205765!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e69f71afe7ce011%3A0x5fd46a95d61e2f21!2s56%20Studio%20Jakarta!5e0!3m2!1sen!2sid!4v1736452377215!5m2!1sen!2sid"
+          style="border:0;"
+          allowfullscreen=""
+          aria-hidden="false"
+          tabindex="0"></iframe>
+      </div>
+    </div>
+  </section>
 </Layout>

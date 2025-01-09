@@ -1,6 +1,5 @@
 import { Image } from 'astro:assets';
 import { useState } from 'react';
-import { useMediaQuery } from 'usehooks-ts';
 import { motion } from 'motion/react';
 
 import logotype from '../assets/56studio_logotype_white.svg';

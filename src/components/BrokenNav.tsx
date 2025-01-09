@@ -1,10 +1,11 @@
 import { useState } from 'react';
+import { getImage } from 'astro:assets';
 import { motion } from 'motion/react';
 
 import logotype from '../assets/56studio_logotype_white.svg';
 import LinkButton from './LinkButton';
 
-const navLinks = ['beranda', 'layanan', 'klien', 'fasilitas', 'tentang'];
+const navLinks = ['beranda', 'layanan', 'klien', 'fasilitas'];
 
 const navMotion = {
   visible: {
@@ -25,21 +26,23 @@ const itemMotion = {
   hidden: { opacity: 0, x: -100 },
 };
 
+const optimizedLogo = await getImage({ src: logotype });
+
 export const Nav = () => {
   const [toggle, setToggle] = useState(false);
 
   return (
-    <header className="z-10 fixed w-full top-0 left-0 py-6 bg-studio-dark">
-      <nav className="relative mx-8 flex justify-between items-center font-medium md:mx-16 lg:mx-20 ">
+    <header className="z-20 fixed w-full top-0 left-0 bg-studio-dark">
+      <nav className="relative mx-8 flex justify-between items-center font-medium md:mx-16 lg:mx-20 py-6">
         <a href="/" aria-label="Go home" title="56 Studio Jakarta">
           <img
-            src={logotype.src}
+            src={optimizedLogo.src}
             alt="56 Studio Jakarta"
             className="max-h-12 md:max-h-16"
           />
         </a>
         <div className="items-center gap-8 hidden lg:flex">
-          <ul className="flex gap-4 text-base xl:text-xl font-bold uppercase">
+          <ul className="flex gap-12 text-base xl:text-xl font-bold uppercase">
             {navLinks.map((n, i) => (
               <li
                 key={i}
@@ -58,7 +61,7 @@ export const Nav = () => {
           width="115.258"
           height="100.094"
           viewBox="0 0 4416 4416"
-          className="group z-50 max-h-12 w-max md:max-h-16 lg:hidden"
+          className="group z-30 max-h-12 w-max md:max-h-16 lg:hidden"
           onClick={() => setToggle((prevToggle) => !prevToggle)}
         >
           <path
@@ -73,7 +76,7 @@ export const Nav = () => {
               cy="2206.5"
               r="970"
               fill="#ff0000"
-              className="opacity-100 group-hover:opacity-0 transition-opacity duration-300 ease-in-out origin-center"
+              className="opacity-100 true-hover:group-hover:opacity-0 transition-opacity duration-300 ease-in-out origin-center"
             />
           )}
           <path
@@ -126,9 +129,7 @@ export const Nav = () => {
               {navLinks.map((n, i) => {
                 return (
                   <motion.li variants={itemMotion} key={i}>
-                    <a href={`/${n == 'beranda' ? '' : n}`}>
-                      {n == 'tentang' ? 'tentang kami' : n}
-                    </a>
+                    <a href={`/${n == 'beranda' ? '' : n}`}>{n}</a>
                   </motion.li>
                 );
               })}
@@ -139,6 +140,11 @@ export const Nav = () => {
           </motion.div>
         )}
       </nav>
+      <div className="w-full hidden" id="progress-bar">
+        <div className="h-0.5 w-full bg-studio-darker overflow-hidden">
+          <div className="animate-progress w-full h-full bg-studio-white origin-left-right"></div>
+        </div>
+      </div>
     </header>
   );
 };
